@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fall Limited Edition Sneakers</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
   </head>
   <body>
     <nav class="top-nav">
@@ -25,7 +27,7 @@
       <img src="images/iamge-product-1.jpg" alt="fall limited edition sneakers" class="product-image" />
       <section class="product-details-container">
         <h3 class="company-category">Sneaker company</h3>
-        <h2>FallLmited Edition Sneakers</h2>
+        <h2>Fall Limited Edition Sneakers</h2>
         <p class="product-description">
           These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
           they'll withstand everything the weather can offer.
@@ -41,7 +43,17 @@
           </span>
           Add to cart
         </button>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
       </section>
     </main>
+    <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+      }
+    </script>
   </body>
 </html>

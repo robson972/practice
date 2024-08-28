@@ -174,3 +174,27 @@ body {
   filter: brightness(0) saturate(100%) invert(1);
   margin-right: var(--small-padding);
 }
+
+/* Styles for the Google sign-in button */
+.google-sign-in-button {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #4285f4;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vmin;
+  padding: 2vh;
+  cursor: pointer;
+}
+
+.google-sign-in-button img {
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(1);
+  margin-right: var(--small-padding);
+}
